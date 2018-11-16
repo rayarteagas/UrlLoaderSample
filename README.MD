@@ -31,9 +31,9 @@ The cache has a configurable max capacity, it can be setted using:
 Loader.resizeCache(10 * 1024 * 1024)//Set cache size to 10MB
 ```
 
-You can request the same image from multiple places in parallel, the Loader would take care of downloading the resource only once, and notify all Downloadables waiting for requested resource as soon as it finises downloading the contents of the url.
+You can request the same image from multiple places in parallel, the Loader will take care of downloading the resource only once, and notify all Downloadables waiting for requested resource as soon as it finises downloading the contents of the url.
 
-You can cancell any Downloadable and it will not affect other downloadables waiting for the same resource. If there are no other dowloadables waiting for the resource, the download task will be cancelled to free valuable resources. This is usefull to avoid downloading resources that are no longer needed and preserve resources.
+You can cancell any Downloadable and it will not affect other downloadables waiting for the same resource. If there are no other Downloadables waiting for the resource, the download task will be cancelled to free valuable resources. This is usefull to avoid downloading resources that are no longer needed and preserve resources.
 
 ```kotlin
 downloadable.cancel()
