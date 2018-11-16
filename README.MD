@@ -1,14 +1,15 @@
 Library functionality relies on Downloadable class.
+
 DownloadableBitmap and DownloadableString has been provided as convenience implementations, but the user can implement any kind of dowload extenging the Downloadable class as fallows:
 
+```kotlin
 //Using WeirdFileFormat with illustrative purpose
-class CustomDownloadable(url: String):Downloadable<WeirdFileFormat>(url)
-{
-    override fun transform(content: DownloadableContent): CustomType {
-    	return WeirdFileFormat.fromBytes(content)
+class CustomDownloadable(url: String):Downloadable<WeirdFileFormat>(url){
+   	override fun transform(content: DownloadableContent): CustomType {
+   		return WeirdFileFormat.fromBytes(content)
 	}
 }
-
+```
 
 Items can be downloaded using: Downloadable.load(url), for example:
 
