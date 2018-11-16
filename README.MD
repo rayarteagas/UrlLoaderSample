@@ -1,4 +1,4 @@
-###Library functionality relies on Downloadable class.
+### Library functionality relies on Downloadable class.
 
 DownloadableBitmap and DownloadableString has been provided as convenience implementations, but the user can implement any kind of dowload extenging the Downloadable class as fallows:
 
@@ -11,7 +11,7 @@ class CustomDownloadable(url: String):Downloadable<WeirdFileFormat>(url){
 }
 ```
 
-###Items can be downloaded using: Downloadable.load(url)
+### Items can be downloaded using: Downloadable.load(url)
 
 ```kotlin
 DownloadableString("http://pastebin.com/raw/wgkJgazE").load {result, error->
@@ -22,7 +22,7 @@ if(error==null){
 }
 ```
 
-###Downloads are choriographed within Loader class.
+### Downloads are choriographed within Loader class.
 
 This is where magic happens. For example, images and JSON text are cached efficiently in memory.
 The cache has a configurable max capacity, it can be setted using:
