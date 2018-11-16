@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">UrlLoader sample</string>
+    <string name="image_item_for_transition">image_item_for_transition</string>
+    <string name="text_item_for_transition">text_item_for_transition</string>
+</resources>
